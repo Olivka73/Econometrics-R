@@ -1,0 +1,6 @@
+setwd("D:/Olivkis/универ/")
+x<-read.table('data.txt',header=TRUE)
+plot(x=x$dist, y=x$salary, xlab="Расстояние до Москвы", ylab="Средняя заработная плата",main="Диаграмма рассеяния", col="red", pch=2)
+text(x=x$dist, y=x$salary-10, labels=x$cityname)
+legend(1250,25700,c("Город","Область"), col=c("red","green"), text.col = "blue", pch = c(2,22),bg="yellow")
+abline(a=24509.17, b=118.15, col="green")
